@@ -33,14 +33,6 @@ public class Section implements Serializable {
     @OneToMany(mappedBy="section", cascade=CascadeType.ALL)
     private Set<Category> category =new HashSet();
 
-//    public Set<Section> getSection() {
-//        return section;
-//    }
-//
-//    public void setSection(Set<Section> section) {
-//        this.section = section;
-//    }
-//    
     public int getId() {
         return id;
     }

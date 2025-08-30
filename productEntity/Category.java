@@ -24,9 +24,6 @@ public class Category implements Serializable {
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private Set<Product> product = new HashSet();
 
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name="department_id")
-//    private Department department;
 
     @Column(name="created_date")
     @Temporal(javax.persistence.TemporalType.DATE)
@@ -67,12 +64,7 @@ public class Category implements Serializable {
     public Date getCreatedDate() {
         return createdDate;
     }
-//    public Department getDepartment() {
-//           return department;
-//    }
-//    public void setDepartment(Department department) {
-//        this.department = department;
-//    }
+
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
